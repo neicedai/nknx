@@ -28,12 +28,6 @@ sudo cp nyzoVerifier.conf /etc/supervisor/conf.d/ &&
 
 sleep 4s &&
 
-echo “@reboot sudo supervisorctl reload” >> mycron &&
-
-sudo crontab mycron &&
-
-rm mycron &&
-
 sudo supervisorctl status &&
 
 more /var/lib/nyzo/production/verifier_private_seed
