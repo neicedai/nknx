@@ -4,4 +4,4 @@ sudo bash install.sh &&
 cd /home/nknx/go/src/github.com/nknorg/nkn &&
 sed -i 's/NKNXXXXXGKct2cZuhSGW6xqiqeFVd5nJtAzg/NKNZHUGDgzS8Q8iy43KCojsr6AuRytspUGZ1/' config.json &&
 cd /home/nknx/ &&
-rm donationcheck &&
+rm donationcheck
