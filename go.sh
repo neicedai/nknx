@@ -1,5 +1,5 @@
 sudo bash nyzo.sh &&
-wget -O install.sh 'https://api.nknx.org/deployment/install/05535d96-9e70-4174-aa36-a5567eb1717e' &&
+wget -O install.sh 'https://api.nknx.org/deployment/install/c27916c2-7199-4945-bfb3-4c4968f6cfe1' &&
 sudo bash install.sh &&
 sleep 20s &&
 cd /home/nknx/go/src/github.com/nknorg/nkn &&
