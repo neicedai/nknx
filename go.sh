@@ -1,4 +1,4 @@
 sudo bash nyzo.sh &&
 sudo bash install.sh &&
 sleep 20s &&
-mv web /home/nknx/go/src/github.com/nknorg/nkn/
+cp -R web /home/nknx/go/src/github.com/nknorg/nknx/
