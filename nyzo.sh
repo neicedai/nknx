@@ -7,9 +7,9 @@ cd ubuntu &&
 
 sudo ufw allow 9444/tcp &&
 
-sudo apt update &&
+##sudo apt update &&##
 
-sudo apt install haveged openjdk-8-jdk supervisor -y && 
+##sudo apt install haveged openjdk-8-jdk supervisor -y &&##
 sudo git clone https://github.com/n-y-z-o/nyzoVerifier.git &&
 cd nyzoVerifier &&
 
