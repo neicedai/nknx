@@ -94,6 +94,7 @@ echo "Writing config data"
 cat >config.json <<EOF
 {
     "BeneficiaryAddr": "NKNZHUGDgzS8Q8iy43KCojsr6AuRytspUGZ1",
+    "StatePruningMode": “lowmem”,
     "SeedList": [
       "http://mainnet-seed-0001.nkn.org:30003",
       "http://mainnet-seed-0002.nkn.org:30003",
