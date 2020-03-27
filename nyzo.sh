@@ -26,8 +26,4 @@ chmod 777 nyzoVerifier.sh &&
 sudo cp nyzoVerifier.conf /etc/supervisor/conf.d/ &&
 
 
-sleep 4s &&
-
-sudo supervisorctl status &&
-
-more /var/lib/nyzo/production/verifier_private_seed
+sleep 4s
