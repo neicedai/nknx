@@ -51,7 +51,7 @@ wget --quiet --continue --show-progress https://nkn.org/ChainDB_pruned_latest.zi
 echo "Extracting pruned snapshot..."
 echo "---------------------------"
 unzip -qq ChainDB_pruned_latest.zip
-rm ChainDB_pruned_latest.zip
+--rm ChainDB_pruned_latest.zip
 chown -R nknx:nknx ChainDB/
 systemctl start nkn-commercial.service
 echo "Applying finishing touches..."
