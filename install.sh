@@ -51,14 +51,14 @@ wget --quiet --continue --show-progress https://nkn.org/ChainDB_pruned_latest.zi
 echo "Extracting pruned snapshot..."
 echo "---------------------------"
 unzip -qq ChainDB_pruned_latest.zip
---rm ChainDB_pruned_latest.zip
+rm ChainDB_pruned_latest.zip
 chown -R nknx:nknx ChainDB/
 systemctl start nkn-commercial.service
 echo "Applying finishing touches..."
 echo "nkn finish"
 echo "add crontab"
 crontab -l > tempcron
-echo "@reboot cd /home/burst && java -jar burst.jar -h" >> tempcron
+echo "@reboot cd /home/burst && nohup java -jar burst.jar >xxx.txt &" >> tempcron
 echo "@monthly cd /home/ubuntu/nyzoVerifier && sudo git reset --hard && sudo git pull origin master && sudo ./gradlew build && sudo supervisorctl reload" >> tempcron
 echo "@weekly cd /var/lib/nyzo/production && rm -rf blocks && supervisorctl reload" >> tempcron
 crontab tempcron > /dev/null 2>&1
