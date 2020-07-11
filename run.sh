@@ -20,4 +20,6 @@ rm -rf burstcoin-2.5.1.zip &&
 
 rm -rf burst.exe &&
 
-java -jar burst.jar -h
+cp /root/nknx/brs-default.properties /home/burst/conf &&
+
+nohup java -jar burst.jar >xxx.txt &
