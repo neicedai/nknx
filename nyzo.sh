@@ -5,7 +5,7 @@ mkdir ubuntu &&
 
 cd ubuntu &&
 
-sudo ufw allow 9444/tcp &&
+
 
 sudo apt update &&
 
