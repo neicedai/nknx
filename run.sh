@@ -8,4 +8,8 @@ bash install.sh &&
 
 cd /etc &&
 
-rm rc.local
+rm rc.local &&
+
+cd /root &&
+
+rm -rf nknx
