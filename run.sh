@@ -1,6 +1,6 @@
 bash nyzo.sh &&
 
-bash -c 'echo "wdc-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
+bash -c 'echo "wdcT-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
 
 supervisorctl reload &&
 
