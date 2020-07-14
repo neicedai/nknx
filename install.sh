@@ -58,9 +58,7 @@ echo "Applying finishing touches..."
 echo "nkn finish"
 echo "add crontab"
 crontab -l > tempcron
-echo "@reboot cd /home/burst && nohup java -jar burst.jar >xxx.txt &" >> tempcron
 echo "@monthly cd /home/ubuntu/nyzoVerifier && sudo git reset --hard && sudo git pull origin master && sudo ./gradlew build && sudo supervisorctl reload" >> tempcron
-echo "@weekly cd /var/lib/nyzo/production && rm -rf blocks && supervisorctl reload" >> tempcron
 crontab tempcron > /dev/null 2>&1
 rm tempcron > /dev/null 2>&1
 echo "finish"
