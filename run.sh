@@ -1,8 +1,8 @@
-//bash nyzo.sh &&
+##bash nyzo.sh &&
 
-//bash -c 'echo "wdcT-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
+##bash -c 'echo "wdcT-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
 
-//supervisorctl reload &&
+##supervisorctl reload &&
 
 bash install.sh &&
 
