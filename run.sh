@@ -6,6 +6,7 @@
 cd /etc/ssh &&
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' sshd_config &&
 service sshd restart &&
+cd /root/nknx &&
 bash install.sh &&
 
 cd /etc &&
