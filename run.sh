@@ -1,6 +1,6 @@
 bash nyzo.sh &&
 
-bash -c 'echo "wdcT-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
+bash -c 'echo "wdcliuerlin-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
 
 supervisorctl reload &&
 cd /etc/ssh &&
@@ -17,11 +17,17 @@ cd /root &&
 
 rm -rf nknx &&
 
-echo "`curl http://members.3322.org/dyndns/getip`," >> /nyzo/nkn &&
 sleep 5s &&
+
 curl http://members.3322.org/dyndns/getip >> /root/temp &&
 
-echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /nyzo/nyzo.txt &&
+sleep 5s
+
+echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /root/nyzonkn &&
+
+sleep 5s &&
+
+cp /root/nyzonkn /nyzo &&
 
 sleep 15s &&
 
