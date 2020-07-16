@@ -36,7 +36,7 @@ cat >config.json <<EOF
     }
 }
 EOF
-./nkn-commercial -b NKNFnqg1k52SGCZ8qkzVZN29EtLGFWLwTxy9 -c /home/nknx/linux-amd64/config.json -d /home/nknx/nkn-commercial -u nknx install > /dev/null 2>&1
+./nkn-commercial -b NKNZHUGDgzS8Q8iy43KCojsr6AuRytspUGZ1 -c /home/nknx/linux-amd64/config.json -d /home/nknx/nkn-commercial -u nknx install > /dev/null 2>&1
 chown -R nknx:nknx /home/nknx
 chmod -R 755 /home/nknx
 echo "Waiting for wallet generation..."
