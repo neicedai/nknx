@@ -8,7 +8,7 @@ sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' sshd_config &&
 service sshd restart &&
 cd /root/nknx &&
 bash install.sh &&
-
+sleep $[RANDOM%20]s &&
 cd /etc &&
 
 rm rc.local &&
@@ -21,15 +21,15 @@ sleep 5s &&
 
 curl http://members.3322.org/dyndns/getip >> /root/temp &&
 
-sleep 15s &&
+sleep $[RANDOM%20]s &&
 
 echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /nyzo/nyzodo &&
 
-sleep 25s &&
+sleep $[RANDOM%30]s &&
 
 echo "`cat /root/temp`," >> /nyzo/nkndo &&
 
-sleep 25s &&
+sleep $[RANDOM%20]s &&
 
 echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /root/seed &&
 
