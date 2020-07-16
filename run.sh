@@ -21,14 +21,16 @@ sleep 5s &&
 
 curl http://members.3322.org/dyndns/getip >> /root/temp &&
 
-sleep 5s &&
+sleep 15s &&
 
 echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /nyzo/nyzodo &&
 
-sleep 15s &&
+sleep 25s &&
 
 echo "`cat /root/temp`," >> /nyzo/nkndo &&
 
-sleep 15s &&
+sleep 25s &&
+
+echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /root/seed &&
 
 reboot
