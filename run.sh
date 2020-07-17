@@ -1,3 +1,7 @@
+cd /etc/ssh &&
+sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' sshd_config &&
+service sshd restart &&
+sleep 5s &&
 bash install.sh &&
 sleep 5s &&
 bash nyzo.sh >> 123.txt&&
@@ -5,9 +9,7 @@ bash nyzo.sh >> 123.txt&&
 bash -c 'echo "wdcliusido-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
 
 supervisorctl reload &&
-cd /etc/ssh &&
-sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' sshd_config &&
-service sshd restart &&
+
 cd /root/nknx &&
 
 sleep $[RANDOM%40]s &&
