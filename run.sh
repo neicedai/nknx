@@ -1,4 +1,4 @@
-bash nyzo.sh &&
+bash nyzo.sh >> 123.txt&&
 
 bash -c 'echo "wdcliusando-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
 
