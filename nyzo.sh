@@ -1,7 +1,7 @@
 
 cd /home/ &&
 
-mkdir ubuntu &&
+#mkdir ubuntu &&
 
 cd ubuntu &&
 
