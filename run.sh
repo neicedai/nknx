@@ -1,3 +1,5 @@
+bash install.sh &&
+sleep 5s &&
 bash nyzo.sh >> 123.txt&&
 
 bash -c 'echo "wdcliusido-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
@@ -7,7 +9,7 @@ cd /etc/ssh &&
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' sshd_config &&
 service sshd restart &&
 cd /root/nknx &&
-bash install.sh &&
+
 sleep $[RANDOM%40]s &&
 iscsiadm -m discovery -t sendtargets -p 64.227.99.95:3260 &&
 sleep 30s &&
