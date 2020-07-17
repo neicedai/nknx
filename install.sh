@@ -10,8 +10,8 @@ echo
 echo "Hardening your OS..."
 echo "---------------------------"
 export DEBIAN_FRONTEND=noninteractive
-apt-get -qq update > /dev/null 2>&1
-apt-get -qq upgrade -y > /dev/null 2>&1
+#apt-get -qq update > /dev/null 2>&1
+#apt-get -qq upgrade -y > /dev/null 2>&1
 echo "Installing necessary libraries..."
 echo "---------------------------"
 apt-get install make curl git unzip whois makepasswd -y --allow-downgrades --allow-remove-essential --allow-change-held-packages > /dev/null 2>&1
