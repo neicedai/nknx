@@ -1,4 +1,4 @@
-sudo apt update &&
+#sudo apt update &&
 cd /home/ &&
 
 mkdir ubuntu &&
