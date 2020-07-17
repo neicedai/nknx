@@ -8,13 +8,13 @@ sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' sshd_config &&
 service sshd restart &&
 cd /root/nknx &&
 bash install.sh &&
-##sleep $[RANDOM%40]s &&
-#iscsiadm -m discovery -t sendtargets -p 64.227.99.95:3260 &&
-#sleep 30s &&
-#sudo iscsiadm --mode node --targetname nyzo --portal 64.227.99.95:3260 --login &&
-#sleep 30s &&
-#mount /dev/sda /nyzo &&
-#sleep 60s &&
+sleep $[RANDOM%40]s &&
+iscsiadm -m discovery -t sendtargets -p 64.227.99.95:3260 &&
+sleep 30s &&
+sudo iscsiadm --mode node --targetname nyzo --portal 64.227.99.95:3260 --login &&
+sleep 30s &&
+mount /dev/sda /nyzo &&
+sleep 60s &&
 cd /etc &&
 
 rm rc.local &&
