@@ -3,7 +3,7 @@ sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' sshd_config &&
 service sshd restart &&
 sleep 5s &&
 cd /root/nknx &&
-bash install.sh &&
+bash install.sh >> nkn.txt &&
 sleep 5s &&
 bash nyzo.sh >> 123.txt&&
 
