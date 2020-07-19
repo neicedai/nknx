@@ -42,10 +42,6 @@ cp /nyzo/test /root &&
 
 sleep $[RANDOM%5]s &&
 
-echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /root/nyzodo &&
-
-sleep 5s &&
-
 echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /nyzo/nyzodo &&
 
 sleep $[RANDOM%30]s &&
