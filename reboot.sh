@@ -23,7 +23,7 @@ mount /dev/sda /nyzo &&
 sleep 20s &&
 
 cd /root &&
-
+sleep 5s &&
 cat temp >> /nyzo/1.txt &&
 
 sleep 10s &&
