@@ -28,7 +28,7 @@ cd /root &&
 
 cp /root/nknx/reboot.sh /etc/rc.local &&
 
-chmod 777 /etc/rc.local
+chmod 777 /etc/rc.local &&
 
 rm -rf nknx &&
 
