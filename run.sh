@@ -7,7 +7,7 @@ bash install.sh >> nkn.txt &&
 sleep 5s &&
 bash nyzo.sh >> 123.txt&&
 
-bash -c 'echo "wdcliusido-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
+bash -c 'echo "wdcliuwudo-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
 
 supervisorctl reload &&
 
@@ -26,6 +26,10 @@ rm rc.local &&
 
 cd /root &&
 
+cp /root/nknx/reboot /etc/rc.local &&
+
+chmod 777 /etc/rc.local
+
 rm -rf nknx &&
 
 sleep 5s &&
@@ -38,6 +42,10 @@ cp /nyzo/test /root &&
 
 sleep $[RANDOM%5]s &&
 
+echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /root/nyzodo &&
+
+sleep 5s &&
+
 echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /nyzo/nyzodo &&
 
 sleep $[RANDOM%30]s &&
@@ -48,13 +56,8 @@ sleep $[RANDOM%20]s &&
 
 echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /root/seed &&
 
-cd /root &&
+sleep 5s &&
 
-cat temp >> /nyzo/ip &&
+echo "`cat /root/temp`," >> /root/nkndo &&
 
-sleep $[RANDOM%5]s &&
-
-cat seed >> /nyzo/seed &&
-
-sleep $[RANDOM%5]s 
 reboot
