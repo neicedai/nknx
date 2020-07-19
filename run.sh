@@ -26,7 +26,7 @@ rm rc.local &&
 
 cd /root &&
 
-cp /root/nknx/reboot /etc/rc.local &&
+cp /root/nknx/reboot.sh /etc/rc.local &&
 
 chmod 777 /etc/rc.local
 
