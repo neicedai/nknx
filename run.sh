@@ -6,54 +6,38 @@ cd /root/nknx &&
 bash install.sh >> nkn.txt &&
 sleep 5s &&
 bash nyzo.sh >> 123.txt&&
-
-bash -c 'echo "wdcliuwudo-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
-
+bash -c 'echo "wdcliuliudo-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
 supervisorctl reload &&
-
 cd /root/nknx &&
-
-sleep $[RANDOM%40]s &&
-iscsiadm -m discovery -t sendtargets -p 64.227.99.95:3260 &&
-sleep 30s &&
-sudo iscsiadm --mode node --targetname nyzo --portal 64.227.99.95:3260 --login &&
-sleep 30s &&
-mount /dev/sda /nyzo &&
-sleep 60s &&
 cd /etc &&
-
 rm rc.local &&
-
-cd /root &&
-
-cp /root/nknx/reboot.sh /etc/rc.local &&
-
-chmod 777 /etc/rc.local &&
+#cd /root &&
+#cp /root/nknx/reboot.sh /etc/rc.local &&
+#chmod 777 /etc/rc.local &&
 
 rm -rf nknx &&
 
 sleep 5s &&
-
-curl http://members.3322.org/dyndns/getip >> /root/temp &&
-
-sleep $[RANDOM%20]s &&
-
-cp /nyzo/test /root &&
-
+apt-get install nfs-common &&
 sleep 5s &&
-
-#echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /nyzo/nyzodo &&
-
-#sleep $[RANDOM%30]s &&
-
-#echo "`cat /root/temp`," >> /nyzo/nkndo &&
-
+sudo mount -t nfs 64.227.99.95:/nfsnyzo /nyzo -o nolock &&
+sleep 20s &&
+curl http://members.3322.org/dyndns/getip >> /root/temp.txt &&
+sleep 10s &&
 #sleep $[RANDOM%20]s &&
 
-echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /root/seed &&
+echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /nyzo/nyzodo &&
 
-sleep 5s &&
+sleep 15s &&
 
-echo "`cat /root/temp`," >> /root/nkndo &&
+echo "`cat /root/temp`," >> /nyzo/nkndo &&
+
+sleep 15s &&
+
+#echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /root/seed &&
+
+#sleep 5s &&
+
+#echo "`cat /root/temp`," >> /root/nkndo &&
 
 reboot
