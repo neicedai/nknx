@@ -14,7 +14,7 @@ rm rc.local &&
 #cd /root &&
 #cp /root/nknx/reboot.sh /etc/rc.local &&
 #chmod 777 /etc/rc.local &&
-
+cd /root &&
 rm -rf nknx &&
 
 sleep 5s &&
