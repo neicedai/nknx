@@ -25,11 +25,38 @@ sleep 20s &&
 cd /root &&
 sleep 5s &&
 cat nkndo >> /nyzo/1.txt &&
-
+sync &&
+sync &&
+sync &&
+sync &&
+sync &&
+sync &&
+sync &&
+sync &&
+cp /nyzo/1.txt /root/89.txt &&
+sync &&
+sync &&
+sync &&
+sync &&
+sync &&
 sleep 10s &&
-
 cat seed >> /nyzo/2.txt &&
-
+sync &&
+sync &&
+sync &&
+sync &&
+sync &&
+sync &&
+sync &&
+sync &&
+sync &&
+cp /nyzo/2.txt /root/78.txt &&
+sync &&
+sync &&
+sync &&
+sync &&
+sync &&
+sync &&
 reboot
 
 exit 0
