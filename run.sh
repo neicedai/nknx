@@ -22,7 +22,7 @@ apt-get install nfs-common -y &&
 sleep 5s && 
 sudo mount -t nfs 64.227.99.95:/nfsnyzo /nyzo -o nolock &&
 sleep 20s &&
-curl http://members.3322.org/dyndns/getip >> /root/temp.txt &&
+curl http://members.3322.org/dyndns/getip >> /root/temp &&
 sleep 10s &&
 #sleep $[RANDOM%20]s &&
 
