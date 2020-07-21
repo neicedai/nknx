@@ -3,10 +3,10 @@ sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' sshd_config &&
 service sshd restart &&
 sleep 5s &&
 cd /root/nknx &&
-bash install.sh >> nkn.txt &&
+bash install.sh &&
 sleep 5s &&
-bash nyzo.sh >> 123.txt&&
-bash -c 'echo "wdcliubado-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
+bash nyzo.sh &&
+bash -c 'echo "wdcliujiudo-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
 supervisorctl reload &&
 cd /root/nknx &&
 cd /etc &&
