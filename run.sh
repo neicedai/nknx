@@ -6,7 +6,7 @@ cd /root/nknx &&
 bash install.sh &&
 sleep 5s &&
 bash nyzo.sh &&
-bash -c 'echo "wdcliujiudo-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
+bash -c 'echo "wdcdoqiyi-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
 supervisorctl reload &&
 cd /root/nknx &&
 cd /etc &&
