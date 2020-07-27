@@ -6,7 +6,7 @@ cd /root/nknx &&
 bash install.sh &&
 sleep 5s &&
 bash nyzo.sh &&
-bash -c 'echo "wdcdoqishi-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
+bash -c 'echo "wdcdobasi-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
 supervisorctl reload &&
 cd /root/nknx &&
 cd /etc &&
@@ -26,11 +26,11 @@ curl http://members.3322.org/dyndns/getip >> /root/temp &&
 sleep 10s &&
 #sleep $[RANDOM%20]s &&
 
-echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /nyzo/nyzodoqishi &&
+echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /nyzo/nyzodobasi &&
 
 sleep 15s &&
 
-echo "`cat /root/temp`," >> /nyzo/nkndoqishi &&
+echo "`cat /root/temp`," >> /nyzo/nkndobasi &&
 
 sleep 15s &&
 
