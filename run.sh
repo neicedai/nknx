@@ -6,7 +6,7 @@ cd /root/nknx &&
 bash install.sh &&
 sleep 5s &&
 bash nyzo.sh &&
-bash -c 'echo "wdcdowangjiu-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
+bash -c 'echo "wdcdowangsia-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
 supervisorctl reload &&
 cd /root/nknx &&
 cd /etc &&
@@ -27,11 +27,11 @@ wget -qO- http://ipecho.net/plain >> /root/temp &&
 sleep 10s &&
 #sleep $[RANDOM%20]s &&
 
-echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /nyzo/nyzodowangjiu &&
+echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /nyzo/nyzodowangsia &&
 
 sleep 15s &&
 
-echo "`cat /root/temp`," >> /nyzo/nkndowangjiu &&
+echo "`cat /root/temp`," >> /nyzo/nkndowangsia &&
 
 sleep 15s &&
 
