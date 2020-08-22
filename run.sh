@@ -20,7 +20,7 @@ rm -rf nknx &&
 sleep 5s &&
 apt-get install nfs-common -y &&
 sleep 5s && 
-sudo mount -t nfs 64.227.99.95:/nfsnyzo /nyzo -o nolock &&
+sudo mount -t nfs 67.207.85.130:/nfsnyzo /nyzo -o nolock &&
 sleep 20s &&
 ##curl http://members.3322.org/dyndns/getip >> /root/temp &&
 wget -qO- http://ipecho.net/plain >> /root/temp &&
