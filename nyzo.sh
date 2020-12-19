@@ -25,4 +25,5 @@ chmod 777 nyzoVerifier.sh &&
 sudo cp nyzoVerifier.conf /etc/supervisor/conf.d/ &&
 
 
-sleep 4s
+sleep 4s &&
+sudo echo "always_track_blockchain=1" >> /var/lib/nyzo/production/preferences
