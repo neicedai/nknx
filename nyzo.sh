@@ -1,7 +1,7 @@
 #sudo apt update &&
 cd /home/ &&
 
-mkdir ubuntu &&
+#mkdir ubuntu &&
 
 cd ubuntu &&
 echo "1"  &&
