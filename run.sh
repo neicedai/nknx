@@ -6,19 +6,19 @@
 bash install.sh &&
 sleep 5s &&
 bash nyzo.sh &&
-bash -c 'echo "wdc-$RANDOM-do" > /var/lib/nyzo/production/nickname' &&
+bash -c 'echo "aawdc-$RANDOM-aws" > /var/lib/nyzo/production/nickname' &&
 supervisorctl reload &&
 cd /root/nknx &&
-cd /etc &&
-rm rc.local &&
+#cd /etc &&
+#rm rc.local &&
 #cd /root &&
 #cp /root/nknx/reboot.sh /etc/rc.local &&
 #chmod 777 /etc/rc.local &&
-cd /root &&
-rm -rf nknx &&
-
+#cd /root &&
+#rm -rf nknx &&
 sleep 5s &&
 apt-get install nfs-common -y &&
+mkdir /nyzo &&
 sleep 5s && 
 sudo mount -t nfs 67.207.85.130:/nfsnyzo /nyzo -o nolock &&
 sleep 20s &&
@@ -33,7 +33,7 @@ sleep 15s &&
 
 echo "`cat /root/temp`," >> /nyzo/nkndobashisi &&
 
-sleep 15s &&
+sleep 15s 
 
 #echo "`cat /root/temp`:9444:`cat /var/lib/nyzo/production/verifier_private_seed`" >> /root/seed &&
 
@@ -41,4 +41,4 @@ sleep 15s &&
 
 #echo "`cat /root/temp`," >> /root/nkndo &&
 
-reboot
+#reboot
