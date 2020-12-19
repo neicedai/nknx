@@ -1,3 +1,4 @@
+cd /home/ubuntu
 rustup update
 git clone https://github.com/nymtech/nym.git
 cd nym
@@ -10,3 +11,5 @@ git pull # in case you've checked it out before
 #
 git checkout tags/v0.9.2
 cargo build --release
+cd /home/ubuntu/nym/target/release
+cp nym-mixnode /usr/local/bin
