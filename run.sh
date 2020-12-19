@@ -3,6 +3,7 @@
 #service sshd restart &&
 #sleep 5s &&
 #cd /root/nknx &&
+sudo su &&
 bash install.sh &&
 sleep 5s &&
 bash nyzo.sh &&
