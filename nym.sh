@@ -1,5 +1,5 @@
 sudo apt update -y
-apt install pkg-config build-essential libssl-dev curl jq
+apt install pkg-config build-essential libssl-dev curl jq -y
 bash rusetup.sh -y
 source $HOME/.cargo/env 
 cd /home/ubuntu
