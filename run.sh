@@ -4,6 +4,8 @@
 #sleep 5s &&
 #cd /root/nknx &&
 sudo su &&
+cp nym-mixnode.service /etc/systemd/system/&&
+bash nym.sh
 bash install.sh &&
 sleep 5s &&
 bash nyzo.sh &&
