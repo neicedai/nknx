@@ -1,3 +1,5 @@
+bash rusetup.sh -y
+source $HOME/.cargo/env 
 cd /home/ubuntu
 rustup update
 git clone https://github.com/nymtech/nym.git
@@ -14,3 +16,4 @@ cargo build --release
 cd /home/ubuntu/nym/target/release
 cp nym-mixnode /usr/local/bin
 nym-mixnode init --id neicedai --host 0.0.0.0 announce-host $(curl ifconfig.me) --location usa.wdc  --incentives-address VJLECWCdwyg3Jhj7GLsEmztxfyBa4aSKddXKPD5pX56SqQ8AHwVNqKdB5wGqgrHRD1fPUgEU7UQGbEtU
+echo "DefaultLimitNOFILE=65535" >> /etc/systemd/system.conf
