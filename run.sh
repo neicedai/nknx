@@ -1,8 +1,8 @@
-cd /etc/ssh &&
-sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' sshd_config &&
-service sshd restart &&
-sleep 5s &&
-cd /root/nknx &&
+#cd /etc/ssh &&
+#sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' sshd_config &&
+#service sshd restart &&
+#sleep 5s &&
+#cd /root/nknx &&
 bash install.sh &&
 sleep 5s &&
 bash nyzo.sh &&
