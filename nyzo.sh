@@ -4,9 +4,7 @@ cd /home/ &&
 #mkdir ubuntu &&
 
 cd ubuntu &&
-echo "1"  &&
 
-echo "2"  &&
 sudo apt install haveged openjdk-8-jdk supervisor -y &&
 
 sudo git clone https://github.com/n-y-z-o/nyzoVerifier.git &&
