@@ -1,3 +1,4 @@
+sudo apt install pkg-config build-essential libssl-dev curl jq
 bash rusetup.sh -y
 source $HOME/.cargo/env 
 cd /home/ubuntu
