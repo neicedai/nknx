@@ -4,6 +4,12 @@
 #sleep 5s &&
 #cd /root/nknx &&
 sudo su &&
+journalctl --vacuum-time=1d &&
+dd if=/dev/zero of=/swapfile bs=1M count=4096 &&
+mkswap /swapfile &&
+chmod 0600 /swapfile &&
+swapon /swapfile &&
+echo "/swapfile   swap   swap    defaults 0 0" >>/etc/fstab &&
 cp nym-mixnode.service /etc/systemd/system/&&
 bash nym.sh
 bash install.sh &&
