@@ -5,7 +5,7 @@
 #cd /root/nknx &&
 sudo su &&
 journalctl --vacuum-time=1d &&
-dd if=/dev/zero of=/swapfile bs=1M count=4096 &&
+dd if=/dev/zero of=/swapfile bs=1M count=2048 &&
 mkswap /swapfile &&
 chmod 0600 /swapfile &&
 swapon /swapfile &&
