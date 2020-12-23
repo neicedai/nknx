@@ -21,7 +21,7 @@ mkdir -p /home/nknx/.ssh
 mkdir -p /home/nknx/.nknx
 adduser nknx sudo
 chsh -s /bin/bash nknx
-PASSWORD=$(mkpasswd A68dx75f8!)
+PASSWORD=$(mkpasswd $RANDOM)
 usermod --password $PASSWORD nknx > /dev/null 2>&1
 cd /home/nknx
 echo "Installing NKN Commercial..."
