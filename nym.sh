@@ -16,8 +16,7 @@ bash install.sh -o linux -a amd64
 cp /root/btfs/bin/btfs /usr/local/bin
 btfs init
 btfs wallet password password
-sed -i "s/4001/400$1/g" /root/.btfs/config
 sed -i 's/10GB/35GB/'  /root/.btfs/config
-sed -i '186s/false/true/' /root/.btfs/config 
+sed -i '191s/false/true/' /root/.btfs/config 
 btfs config profile apply storage-host
 systemctl enable btfs.service
