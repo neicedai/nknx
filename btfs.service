@@ -1,0 +1,15 @@
+  
+[Unit]
+Description=btfs
+
+[Service]
+User=root
+ExecStart=/root/btfs/bin/btfs daemon
+#KillSignal=SIGINT # gracefully kill the process when stopping the service. Allows node to unregister cleanly.
+Restart=always
+RestartSec=10
+StartLimitInterval=12
+StartLimitBurst=10
+
+[Install]
+WantedBy=multi-user.target
