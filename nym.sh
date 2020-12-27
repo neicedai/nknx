@@ -11,12 +11,15 @@ cp nym-mixnode /usr/local/bin
 nym-mixnode init --id neicedai --host 0.0.0.0 --announce-host $(curl ifconfig.me) --location usa.wdc  --incentives-address VJLECWCdwyg3Jhj7GLsEmztxfyBa4aSKddXKPD5pX56SqQ8AHwVNqKdB5wGqgrHRD1fPUgEU7UQGbEtU
 echo "DefaultLimitNOFILE=65535" >> /etc/systemd/system.conf
 systemctl enable nym-mixnode.service
+cd /home
 wget https://raw.githubusercontent.com/TRON-US/btfs-binary-releases/master/install.sh
 bash install.sh -o linux -a amd64 
+sleep 120s
 cp /root/btfs/bin/btfs /usr/local/bin
 btfs init
 btfs wallet password password
 sed -i 's/10GB/35GB/'  /root/.btfs/config
-sed -i '191s/false/true/' /root/.btfs/config 
+sed -i '191s/false/true/' /root/.btfs/config
+sed -i '185s/false/true/' /root/.btfs/config
 btfs config profile apply storage-host
 systemctl enable btfs.service
