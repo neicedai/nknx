@@ -13,7 +13,7 @@ echo "DefaultLimitNOFILE=65535" >> /etc/systemd/system.conf
 systemctl enable nym-mixnode.service
 cd /home/nknx
 
-bash installbtfs.sh -o linux -a amd64 
+bash installbtfs.sh -o linux -a amd64 > /home/2
 
 cp /root/btfs/bin/btfs /usr/local/bin
 btfs init
