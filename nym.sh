@@ -12,9 +12,9 @@ nym-mixnode init --id neicedai --host 0.0.0.0 --announce-host $(curl ifconfig.me
 echo "DefaultLimitNOFILE=65535" >> /etc/systemd/system.conf
 systemctl enable nym-mixnode.service
 cd /home
-wget https://raw.githubusercontent.com/TRON-US/btfs-binary-releases/master/install.sh
-bash install.sh -o linux -a amd64 
-sleep 120s
+
+bash installbtfs.sh -o linux -a amd64 
+
 cp /root/btfs/bin/btfs /usr/local/bin
 btfs init
 btfs wallet password password
