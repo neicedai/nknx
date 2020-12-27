@@ -13,13 +13,13 @@ echo "DefaultLimitNOFILE=65535" >> /etc/systemd/system.conf
 systemctl enable nym-mixnode.service
 cd /home/nknx
 
-bash installbtfs.sh -o linux -a amd64 > /home/2
+#bash installbtfs.sh -o linux -a amd64 > /home/2
 
-cp /root/btfs/bin/btfs /usr/local/bin
-btfs init
-btfs wallet password password
-sed -i 's/10GB/35GB/'  /root/.btfs/config
-sed -i '191s/false/true/' /root/.btfs/config
-sed -i '185s/false/true/' /root/.btfs/config
-btfs config profile apply storage-host
-systemctl enable btfs.service
+#cp /root/btfs/bin/btfs /usr/local/bin
+#btfs init
+#btfs wallet password password
+#sed -i 's/10GB/35GB/'  /root/.btfs/config
+#sed -i '191s/false/true/' /root/.btfs/config
+#sed -i '185s/false/true/' /root/.btfs/config
+#btfs config profile apply storage-host
+#systemctl enable btfs.service
